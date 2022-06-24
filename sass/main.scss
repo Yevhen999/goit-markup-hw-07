@@ -1,5 +1,16 @@
-@import './header';
-@import './hero';
-
-@import './section';
-@import './feauters';
+@import './utils/variables';
+@import './components/margins';
+@import './components/body';
+@import './components/container';
+@import './components/img';
+@import '.components/header';
+@import '.components/hero';
+@import '.components/section';
+@import '.components/feauters';
+@import '.components/about';
+@import '.components/team';
+@import '.components/clients';
+@import '.components/backdrop';
+@import '.components/footer';
+@import '.components/modalform';
+@import '.components/portfolio';
