@@ -36,16 +36,15 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
+  &:focus-within {
+    border-color: var(--accent-color);
+  }
 }
 
 .modal-form__input--icon {
   position: absolute;
   top: 11px;
   left: 12px;
-}
-
-.modal-form__input:focus-within {
-  border-color: var(--accent-color);
 }
 
 .modal-form__input:focus-within + span {
@@ -67,10 +66,9 @@
   border-radius: 4px;
   padding: 12px 16px;
   resize: none;
-}
-
-.modal-form__area:focus-within {
-  border-color: var(--accent-color);
+  &:focus-within {
+    border-color: var(--accent-color);
+  }
 }
 
 .checkbox {
@@ -134,9 +132,8 @@
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.button-submit:hover,
-.button-submit:focus {
-  background-color: #188ce8;
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
 }

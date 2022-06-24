@@ -24,14 +24,13 @@
   transition-property: color, border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+  }
 }
 
 .clients-list__icon {
   fill: currentColor;
-}
-
-.clients-list__link:hover,
-.clients-list__link:focus {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
 }

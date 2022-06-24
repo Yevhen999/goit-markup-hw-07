@@ -51,16 +51,15 @@
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--accent-color);
+  }
 }
 
 .address-list__contacts--mail {
   margin-bottom: 9px;
-}
-
-.address-list__contacts:hover,
-.address-list__contacts:focus,
-.address-list__contacts:active {
-  color: var(--accent-color);
 }
 
 .footer-soc__title {
@@ -84,10 +83,9 @@
   text-align: center;
   justify-content: center;
   margin-right: 10px;
-}
-
-.footer-soc__item:last-child {
-  margin-right: 0;
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .footer-soc__link {
@@ -102,15 +100,14 @@
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
 }
 
 .footer-soc__icon {
   fill: currentColor;
-}
-
-.footer-soc__link:hover,
-.footer-soc__link:focus {
-  background-color: var(--accent-color);
 }
 
 .footer-sign {

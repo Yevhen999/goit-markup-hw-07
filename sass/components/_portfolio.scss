@@ -6,10 +6,9 @@
   margin-bottom: 50px;
   display: flex;
   justify-content: center;
-}
-
-.filters .filters-item:not(:last-child) {
-  margin-right: 8px;
+  .filters-item:not(:last-child) {
+    margin-right: 8px;
+  }
 }
 
 .portfolio-btn {
@@ -29,14 +28,13 @@
   transition-property: background-color, color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.portfolio-btn:hover,
-.portfolio-btn:focus {
-  background-color: var(--accent-color);
-  color: var(--third-background-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--third-background-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
 }
 
 .portfolio-card {
@@ -65,24 +63,24 @@
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
+  .portfolio-item {
+    width: calc((100% - 60px) / 3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+  .portfolio-item:nth-child(3n) {
+    margin-right: 0;
+  }
+  .portfolio-item:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
 }
 
 .portfolio-item {
   background-color: var(--third-background-color);
-}
-
-.portfolio-list .portfolio-item {
-  width: calc((100% - 60px) / 3);
-  margin-right: 30px;
-  margin-bottom: 30px;
-}
-
-.portfolio-list .portfolio-item:nth-child(3n) {
-  margin-right: 0;
-}
-
-.portfolio-list .portfolio-item:nth-last-child(-n + 3) {
-  margin-bottom: 0;
+  &:hover .portfolio-overlay-text {
+    transform: translateY(0);
+  }
 }
 
 .portfolio-link {
@@ -91,12 +89,11 @@
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.portfolio-link:hover,
-.portfolio-link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
 }
 
 .portfolio-overlay {
@@ -114,12 +111,7 @@
   letter-spacing: 0.03em;
   color: #ffffff;
   padding: 63px 24px;
-
   top: 0;
   transform: translateY(100%);
   transition: transform 250ms;
-}
-
-.portfolio-item:hover .portfolio-overlay-text {
-  transform: translateY(0);
 }
